@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="padding-left: 35px ;color: #8669C1;">
+        Add a New Tourist Place
+      </h2>
+      <form id="frm1" name="regForm">
+        <div class="row" id="nameDiv">
+          <div class="col-25">
+            <label>Name: </label>
+          </div>
+          <div class="col-75">
+            <input id="nameInput" type="text" name="name" required />
+            <div id="nameError"></div>
+          </div>
+        </div>
+
+        <div class="row" id="addressDiv">
+          <div class="col-25">
+            <label>Address: </label>
+          </div>
+          <div class="col-75">
+            <input id="addressInput" type="text" name="address" required />
+            <div id="addressError"></div>
+          </div>
+        </div>
+
+        <div class="row" id="ratingDiv">
+          <div class="col-25">
+            <label>Rating: </label>
+          </div>
+          <div class="col-75">
+            <input
+              autocomplete="off"
+              min="1"
+              max="10"
+              id="ratingInput"
+              type="number"
+              name="rating"
+            />
+            <div id="ratingError"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label>Type: </label>
+          </div>
+          <div class="col-75">
+            <select id="type">
+              <option value="Beach" Selected>Beach</option>
+              <option value="Mountain">Mountain</option>
+              <option value="Hills">Hills</option>
+              <option value="Landmark">Landmark</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" id="pictureDiv">
+          <div class="col-25">
+            <label>Picture: </label>
+          </div>
+          <div class="col-75">
+            <input
+              id="pictureInput"
+              name="picture"
+              type="file"
+              accept="image/*"
+              required
+            />
+            <div id="pictureError"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" value="Reset" id="reset" style="margin: 5px;" />
+          <input
+            type="submit"
+            value="Submit"
+            id="submit"
+            style="margin: 5px;"
+          />
+        </div>
+      </form>
+    </div>
+    <input
+      type="text"
+      id="searchName"
+      placeholder="Search for names.."
+      title="Type in a name"
+    />
+    <table id="dataTable"></table>
+  </body>
+  <footer>
+    <script src="touristapp.js"></script>
+  </footer>
+</html>
