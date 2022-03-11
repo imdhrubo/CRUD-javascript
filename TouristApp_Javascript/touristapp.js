@@ -190,7 +190,7 @@ function compareForSorting(a, b) {
 }
 
 function ValidateTheInput(input, error, alertDiv) {
-  if (input != "ratingInput" && error != "ratingError" && div != "RatingDiv") {
+  if (input != "ratingInput" && error != "ratingError" && alertDiv != "RatingDiv") {
     var field = document.getElementById(input);
     var error = document.getElementById(error);
     if (field.value == "") {
@@ -205,7 +205,7 @@ function ValidateTheInput(input, error, alertDiv) {
   } else if (
     input === "ratingInput" &&
     error === "ratingError" &&
-    div === "ratingDiv"
+    alertDiv === "ratingDiv"
   ) {
     var field = document.getElementById(input);
     var error = document.getElementById(error);
